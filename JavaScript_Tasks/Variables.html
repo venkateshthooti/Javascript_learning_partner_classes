@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // Task 3
+        alert("script 1 loaded")
+    </script>
+</head>
+
+<body>
+
+    <button onclick="onShowAge()">Show Age</button>
+    <p id="result"></p>
+    
+    <script>
+        // Task 1
+
+        var firstName = "Venkatesh"
+        var middleName = "riya"
+        var lastName = "Thooti"
+        console.log("Full name is = " + firstName + " " + middleName + " " + lastName);
+        // ---
+        studentName = 'Venkatesh'
+        contactNo = 8122312123
+        fatherName = "Surya Narayana"
+        motherName = "Laxmi"
+        classNo = "6th"
+        rollNo = 1122
+        console.log(studentName);
+        console.log(contactNo);
+        console.log(fatherName);
+        console.log(motherName);
+        console.log(classNo);
+        console.log(rollNo);
+        // -----
+        var address = "H.no 1-35 ,Vill.Gadderagadi, mandal.Mandamarri , dist.Adilabad, pincode:504301 "
+        var city = 'Mancherial'
+        var pincode = 504301
+        console.log(address);
+        console.log(city);
+        console.log(pincode);
+
+        // Task2
+
+        var currentDate = new Date()
+        alert("today date is = " + currentDate)
+        // ---
+        var patientName = "Karthik"
+        var patientAge = 28
+        var patientAddress = "kphb , hyd"
+        console.log(patientName + "  " + patientAge);
+
+        // Task 4
+
+        var num1 = 1122
+        var num2 = 3344
+        alert("Before swapping " + "num1 = " + num1 + " " + "num2 = " + num2)
+
+        var temp = num1
+        num1 = num2
+        num2 = temp
+        alert("After swapping " + "num1 = " + num1 + " " + "num2 = " + num2)
+
+        //Task 5
+        var productName = "Mobile"
+        var price = 15000
+        var quantity = 200
+        var discountPercentage = 10
+
+        var totalPrice = price * quantity
+        var discountPriceOfTotal = totalPrice * 0.1
+
+        var finalPrice = totalPrice - discountPriceOfTotal
+
+        console.log("Fianl price after 10% Discont = " + finalPrice)
+
+        var formattedString = `Product: ${productName},
+Original Total: ${totalPrice},
+Discount: ${discountPriceOfTotal},
+Final Price: ${finalPrice}`;
+
+        console.log(formattedString);
+        alert(formattedString)
+
+        // Task 6
+
+        function onShowAge() {
+
+            var birthYear = 1991
+            var currentYear = 2026
+            var bitrhMonth = 8
+
+            var currentMonth = 11
+
+            var totalYears = currentYear - birthYear
+            var totalMonths = currentMonth - bitrhMonth
+
+            console.log(`You are ${totalYears} years and ${totalMonths} months old`)
+            alert(`You are ${totalYears} years and ${totalMonths} months old`)
+            
+
+        }
+
+        // Task 7
+
+        var temperature = 25
+        var Fahrenheit = (temperature * 9 / 5) + 32;
+        var Kelvin = temperature + 273.15
+
+        var formattedTempratures=`Celsius : ${temperature}C , Fahrenheit : ${Fahrenheit}F , Kelvin:${Kelvin}K`
+        console.log(formattedTempratures);
+        alert(formattedTempratures)
+        document.getElementById("result").innerText = formattedTempratures;
+        
+
+
+    </script>
+
+    <script>
+        // Task 3
+        alert("script 2 loaded")
+    </script>
+
+    <div>
+        <button onclick="getFirstCharactors()">Get First Charactors</button>
+        <br>
+        <textarea name="" id="textArea" style="width: 200px; height: 100px;"></textarea>
+        <input type="text" id="name">
+        <button onclick="onSearch()">Search</button>
+    </div>
+    <br>
+    <div>
+        <textarea name="" id="textArea1" style="width: 200px; height: 100px;"></textarea>
+        <input type="text" id="name1" placeholder="Replace word">
+        <input type="text" id="name2" placeholder="Replace with">
+        <p id="decsript">Hii</p>
+        <button onclick="onReplace()">Replace</button>
+
+    </div>
+
+
+    <script>
+
+        // Advanced Tasks
+
+        // ----// Task 1
+        var isAvailble = false
+        console.log(isAvailble == true ? "Value is Success" : "Value is Danger")
+
+        var firstName = "Venkatesh"
+        var middleName = "Riya"
+        var lastName = "Thooti"
+        // ----- Task 2
+        function getFirstCharactors() {
+            console.log(firstName[0] + "-" + middleName[0] + "-" + lastName[0]);
+        }
+
+        //    Task 3
+
+        var currentDate = new Date()
+        var formattedYear = currentDate.getFullYear()
+        var formattedMonth = currentDate.getMonth() + 1
+        var formattedDate = currentDate.getDate()
+
+        console.log(currentDate)
+        console.log(formattedYear + "/" + formattedMonth + "/" + formattedDate)
+
+        // Task 4
+
+        var productName = "Laptop"
+        var price = 20000.54655
+        var discount = 10
+
+        var discontAmount = price * 0.1
+        var finalPrice = (price - discontAmount).toFixed(2);
+
+        var prodDescription = `product Name is ${productName} Original price is ${price} with Discount ${discount}% => new Final price will be ${finalPrice}`
+        console.log(prodDescription);
+
+        // Task 5
+
+        function onSearch() {
+            var textAreaText = document.getElementById("textArea").value
+            var inputText = document.getElementById('name').value
+            if (textAreaText.includes(inputText)) {
+                alert(inputText + " is present in text area")
+            } else {
+                alert(inputText + " is not present in text area")
+            }
+        }
+
+        // Task 6
+
+        function onReplace() {
+
+            var originalText = document.getElementById("textArea1").value
+            var replaceWord = document.getElementById("name1").value
+            var replaceWith = document.getElementById("name2").value
+            var newSenetence = originalText.replace(replaceWord, replaceWith)
+
+
+            document.getElementById("decsript").innerText = newSenetence
+            document.getElementById("textArea1").value = newSenetence
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
