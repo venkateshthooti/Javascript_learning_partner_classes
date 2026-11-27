@@ -12,6 +12,8 @@
 
 
     <script>
+
+        // Arithmatic operactors + - , Assignment operator =
         var num1 = 2
         var num2 = 5
 
@@ -31,7 +33,7 @@
         console.log(num33 + num44);  //contcatinating
         console.log(num33 + num55)   //Concatinate
 
-        ///comparision operators
+        ///comparision operators < , > , == , ===
 
         var num6 = 22
         var num7 = 44
@@ -58,7 +60,7 @@
         console.log(num10 === num11);  //false  === checks value and datatype aswell
         console.log(num10 !== num11); //true
 
-        ///Increment and decrement operators
+        ///Increment and decrement operators  ++ , --
 
         var number1 = 23
         number1 = number1 + 1
@@ -74,6 +76,41 @@
 
 
         ///Logical operators
+
+        true && true
+        true
+        true && true && false
+        false
+        false && false
+        false
+        false || false
+        false
+        false || true
+        true
+
+        var studName = "AAA"
+        var stud2Name = "AAA"
+        var studCity = "Pune"
+        // var stud2City="Pune"
+        var stud2City = "pune"
+
+        console.log(studName == stud2Name && studCity == stud2City); //false
+
+        console.log((true && true && true) || false);  //true
+        console.log((true || true || true) && (false && false && false))  //false 
+
+        //turnary operator
+
+        var isProductAvailable = false
+
+        console.log(isProductAvailable == true ? "Yes" : "No");  //No
+
+        console.log(isProductAvailable == true ? 2 == 2 ? "111" : "222" : "aaa" != 'assd' ? "yyy" : "nnnn");  ///yyy
+
+
+
+
+
 
 
 
