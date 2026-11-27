@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var num1 = 12;
+        var num2 = 10
+
+        // addtwoNumbers()
+        function addtwoNumbers() {
+            debugger
+            var resullt = num1 + num2
+            console.log("Addition is " + resullt);
+        }
+
+        function addNumberwithSquare() {
+            var squareResult1 = num1 * num1
+            var squareResult2 = num2 * num2
+            var sqresult = squareResult1 + squareResult2
+            console.log("addition of square two numbers is " + sqresult);
+            alert("addition of square two numbers is " + sqresult);
+
+        }
+        // addNumberwithSquare()
+        // debugger
+        // addtwoNumbers()
+        // addtwoNumbers()
+        // addtwoNumbers()
+
+        // Function with parameters
+
+        function addTwoNuWithParam(num1=0, num2=0) {
+            debugger
+            var result = num1 + num2
+            // if (num1 != undefined && num2 != undefined) {
+            //     var result = num1 + num2
+            // }
+            console.log("Add res " + result);
+
+        }
+
+        debugger
+        addTwoNuWithParam(6, 5)
+        addTwoNuWithParam(45, 89, 55)  //55 ignored
+        addTwoNuWithParam(77)      // num2 is taken as undefined ,, 77 + Undefined = NAN
+        //To handel NAN situation , we have to assign default values as zero 0 OR check if num1 and num2 are numbers or more tahn zero
+        addTwoNuWithParam()  
+
+        function getPiValue(){
+            return 3.14
+        }
+        debugger
+        const piResult=getPiValue()
+        console.log("Pi result is "+piResult);
+
+
+        function getSum(num1, num2){
+            debugger
+            return num1+num2
+        }
+        debugger
+        const sumResult=getSum(4,4)
+        const sumResult1=getSum(5,5)
+        
+
+    </script>
+
+</body>
+
+</html>
