@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Task 7 -->
+
+    <input type="text" id="firstNumber">
+    <input type="text" id="secondNumber">
+    <input type="text" id="thirdNumber">
+    <button onclick="onAnalyzeNumbers()">Analyze Numbers</button>\
+
+    <br>
+
+    <input type="text" placeholder="Age" id="age">
+    <input type="text" placeholder="income" id="income">
+    <input type="text" placeholder="creditscore" id="creditscore">
+    <p id="result">Result</p>
+    <button onclick="onCheckLoanEliginility()">Loan eligibility</button>
+
+    <br>
+
+    <input type="number" placeholder="telugu" id="telugu">
+    <input type="number" placeholder="English" id="English">
+    <input type="number" placeholder="hindi" id="hindi">
+
+    <strong id="marksResult">Marks result</strong>
+    <button onclick="onCheckaverageMarks()">Average marks</button>
+
+
+    <script>
+        // Task1 
+        var num1 = 12
+        var num2 = 13
+        var add = num1 + num2
+        var sub = num1 - num2
+        var mul = num1 * num2
+        var div = num1 / num2
+
+        alert("Addition =" + add + " , " + "Subtraction = " + sub)
+
+        console.log("Multiplication = " + mul + " , " + "Division = " + div);
+
+        // Task 2
+
+        var productPrice = 1000
+        var discount = 10
+
+        var discountedPrice = 1000 * 0.1
+        var finalPrice = productPrice - discountedPrice
+        confirm("Final prdocut price after " + discount + "%" + " discount = " + finalPrice)
+
+        // Task 3
+
+        var num3 = 23
+        num3++
+        num3++
+        num3++
+        num3++
+        num3++
+
+        console.log("num3 after 5 times increment " + num3)
+        num3--
+        num3--
+        num3--
+        num3--
+        num3--
+        num3--
+        alert("num3 after 6 times decrement " + num3)
+
+        // Task 4
+
+        var stud1 = 'Venkatesh'
+        var stud2 = "Venkatesh"
+        var stud3 = "Anil"
+
+        var state1 = "Telangana"
+        var state2 = "Telangana"
+        var state3 = "Kerala"
+
+        if (stud1 === stud2 && state1 === state2) {
+            console.log(stud1 + " and " + stud2, "have the same name  and  same state");
+
+        }
+        if (stud1 === stud3 && state1 === state3) {
+            console.log(stud1 + " and " + stud3, "have the same name  and  same state");
+
+        }
+        if (stud3 === stud2 && state3 === state2) {
+            console.log(stud3 + " and " + stud2, "have the same name  and  same state");
+
+        }
+
+        // Task 5
+
+        var student1 = 'Venkatesh'
+        var student2 = "Rakesh"
+
+        var state11 = "AP"
+        var state22 = "Telangana"
+
+        console.log(state11.length + "    mmmmmmmmmmmm")
+
+        if (state11.length === state22.length) {
+            console.log("Both states has length");
+
+        } else {
+            console.log("Both states has different number of characters");
+        }
+
+        // Task 6
+
+        var isVisible = false
+        isVisible = !isVisible
+
+        console.log("Reverse the boolean value by using ! operator = " + isVisible)
+
+        // Task 7
+
+        function onAnalyzeNumbers() {
+            var firstNumber = document.getElementById("firstNumber").value
+            var secondNumber = document.getElementById("secondNumber").value
+            var thirdNumber = document.getElementById("thirdNumber").value
+
+            // Check descending order
+            if (firstNumber > secondNumber && secondNumber > thirdNumber) {
+                console.log("Descending Order: Numbers are in descending order.");
+            } else {
+                console.log("Descending Order: Numbers are NOT in descending order.");
+            }
+
+            // Check all three numbers are equal
+            if (firstNumber === secondNumber && secondNumber === thirdNumber) {
+                console.log("Equality Check: All three numbers are equal.");
+            } else {
+                console.log("Equality Check: All three numbers are NOT equal.");
+            }
+
+            // Check Arithmetic Progression (AP)
+            if ((secondNumber - firstNumber) === (thirdNumber - secondNumber)) {
+                console.log("Arithmetic Progression: Numbers form an arithmetic progression.");
+            } else {
+                console.log("Arithmetic Progression: Numbers do NOT form an arithmetic progression.");
+            }
+        }
+
+        // Task 8
+
+        function onCheckLoanEliginility() {
+            var age = document.getElementById("age").value
+            var income = document.getElementById("income").value
+            var creditscore = document.getElementById("creditscore").value
+            if ((age >= 21 && income >= 25000) || creditscore >= 700) {
+                alert("Eligible for loan")
+                document.getElementById("result").innerHTML =
+                    "<strong>Eligible for Loan</strong>";
+            } else {
+                alert("Not Eligible for loan")
+                document.getElementById("result").innerHTML =
+                    "<strong>Not Eligible for loan</strong>";
+            }
+        }
+
+        // Task 9
+
+        function onCheckaverageMarks() {
+
+            var teluguMarks = Number(document.getElementById("telugu").value)
+            var englishMarks = Number(document.getElementById("English").value)
+            var hindiMarks = Number(document.getElementById("hindi").value)
+
+            var Average = (teluguMarks + englishMarks + hindiMarks) / 3
+            console.log("average = " + Average)
+            var result = document.getElementById("marksResult");
+
+            // if (Average >= 90) {
+            //     result.innerText = "Average is =" + Average + " so Grade is =" + " A+"
+            //     result.style.color = "green"
+
+
+            // }
+            // else if (Average >= 80 && Average < 90) {
+            //     result.innerText = "Average is =" + Average + " so Grade is =" + " A"
+            //     result.style.color = "blue"
+
+            // }
+            // else if (Average >= 70 && Average < 80) {
+            //     result.innerText = "Average is =" + Average + " so Grade is =" + " B"
+            //     result.style.color = "orange"
+
+            // }
+            // else if (Average >= 60 && Average < 70) {
+            //     result.innerText = "Average is =" + Average + " so Grade is =" + " c"
+            //     result.style.color = "purple"
+
+            // } else {
+            //     result.innerText = "Average is =" + Average + " so Grade is =" + " Fail"
+            //     result.style.color = "red"
+            // }
+
+            switch (true) {
+
+                case (Average >= 90):
+                    result.innerText = "Average is = " + Average + " so Grade is = A+";
+                    result.style.color = "green";
+                    break;
+
+                case (Average >= 80):
+                    result.innerText = "Average is = " + Average + " so Grade is = A";
+                    result.style.color = "blue";
+                    break;
+
+                case (Average >= 70):
+                    result.innerText = "Average is = " + Average + " so Grade is = B";
+                    result.style.color = "orange";
+                    break;
+
+                case (Average >= 60):
+                    result.innerText = "Average is = " + Average + " so Grade is = C";
+                    result.style.color = "purple";
+                    break;
+
+                default:
+                    result.innerText = "Average is = " + Average + " so Grade is = Fail";
+                    result.style.color = "red";
+                    break;
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
